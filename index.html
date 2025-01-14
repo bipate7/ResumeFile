@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+    }
+    header {
+        background-color: #343a40;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 50px;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 24px;
+    }
+    nav a:hover {
+        color: #007bff;
+    }
+    .intro {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #007bff;
+        color: white;
+    }
+    .intro h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .intro p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    .intro button {
+        padding: 15px 30px;
+        background-color: #0056b3;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 20px;
+        transition: background-color 0.3s;
+    }
+    .intro button:hover {
+        background-color: #004080;
+    }
+    #about {
+        padding: 5px 0px;
+    }
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 50px;
+        color: #333;
+    }
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-content img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .about-text {
+        max-width: 600px;
+        color: #555;
+    }
+
+    #projects {
+        background-color: #f8f9fa;
+        padding: 50px 20px;
+    }
+    .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .project-card {
+        flex: 1 1 calc(33.333% - 20px);
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card h3 {
+        margin: 0;
+        padding: 20px;
+        background-color: #343a40;
+        color: white;
+        text-align: center;
+    }
+    .project-card p {
+        padding: 20px;
+        color: #555;
+    }
+    #achievements {
+        padding: 50px 20px;
+        background-color: #e9ecef;
+    }
+    #achievements ul {
+        list-style-type: none;
+    }
+    #achievements li {
+        margin-bottom: 20px;
+        color: #333;
+    }
+    #achievements
+    #achievements b {
+        font-size: 1.5em;
+        color: #007bff;
+    }
+    #achievements ul ul {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    #contact {
+        background-color: #f8f9fa;
+        padding: 50px 20px;
+    }   
+    form {
+        max-width: 600px;
+        margin: auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    form label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+        font-size: 1.2em;
+    }
+    form input, form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+    form button {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s;
+    }
+    form button:hover {
+        background-color: #0056b3;
+    }
+    footer {
+        background-color: #343a40;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+    footer p {
+        margin: 0;
+        font-size: 1.2em;
+    }
+    footer .social-links {
+        margin-top: 10px;
+    }
+    footer .social-links a {
+        color: #007bff;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1.2em;
+    }
+    footer .social-links a:hover {
+        color: #0056b3;
+    }
+    </style>
+    <title>Karan Bipate - Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+        <h1>Karan Bipate</h1>
+        
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="intro">
+            <h2>Discover the World of Visual Storytelling with Me!</h2>
+            <p>Hello Everyone! Welcome to my portfolio!</p>
+            <button>Download CV</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="DSC_0478.jpg" alt="Karan Bipate">
+                <div class="about-text">
+                    <p>Thanks for your interest, here is a quick story of me and this Website.</p>
+                    <p>"I'm Karan Bipate, a versatile professional based in Nagpur, Maharashtra, with a passion for full-stack development, photography, and videography. With a keen eye for detail and a love for storytelling through visuals and code, I specialize in capturing authentic moments and creating compelling digital experiences. Whether it's developing dynamic web applications, capturing stunning portraits and landscapes, or producing cinematic wedding films and promotional videos, I aim to deliver high-quality work that resonates and inspires. Explore my diverse portfolio to see how I bring creativity and technical expertise to every project."</p>
+                    <p>Cheers,<br><b>Karan Bipate</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects / Internships</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Rudra Electrical Industries, Hingna MIDC, Nagpur 2023</h3>
+                    <p>Gained hands-on experience in the maintenance, fault finding, and safety testing of electrical control panels. Assisted in planned preventative maintenance and condition-based monitoring. Worked with various control panels, including Motor Control Centres (MCCs), to ensure the safe operation and efficiency of mechanical processes. Developed skills in monitoring and adjusting components to optimize system performance, contributing to the smooth operation of industrial plant equipment.</p>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="container">
+            <h2>Achievements</h2>
+            <ul>
+                <li><b>Intern</b>
+                    <ul>
+                        <li>December 2023</li>
+                        <li>Write Technical articles</li>
+                    </ul>
+                </li>
+                <li><b>Wsghdhdjjnndsnfsnn</b>
+                    <ul>
+                        <li>Adkangjndaghh</li>
+                        <li>Ffasgehgdsggdshdh</li>
+                    </ul>
+                </li>
+                <li><b>Mentored by me</b>
+                    <ul>
+                        <li>Fsadgdhd</li>
+                        <li>Asdfsbgdsb</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+                <label for="number">Number</label>
+                <input type="number" id="number" name="number">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Karan Bipate. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/karanbipate/">LinkedIn</a>
+                <a href="https://twitter.com/">Twitter</a>
+                <a href="https://www.instagram.com/every_.moment_.matters_/">Instagram</a>
+                <a href="mailto:bipate.karan@gmail.com">Email</a>
+                <a href="#home">Top ☝</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
